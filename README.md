@@ -138,7 +138,7 @@ A simpler solution would be better, a solution that i knew already from previous
 - WebUI
 - Low requirements
 
-There's a strange USB internal port on this motherboard, so instead of using one of the 4 trays for the OS (and a HDD/SSD) or the ODD tray with some adapters for this tiny OS, I decided to install it on a small USB flash drive (4-16 GB). This will be easy, quoting the documentation[^omvbusbinstall]:
+There's a strange USB internal port on this motherboard, so instead of using one of the 4 trays for the OS (and a HDD/SSD) or the ODD tray with some adapters for this tiny OS, I decided to install it on a small USB flash drive (4-16 GB). This will be easy, quoting the documentation[^omvusbinstall]:
 
 >**Installation on USB**
 >
