@@ -148,6 +148,13 @@ There's a strange USB internal port on this motherboard, so instead of using one
 
 [^omvusbinstall]: [from OMV documentation](https://openmediavault.readthedocs.io/en/5.x/installation/on_usb.html)
 
+After several attempts with different USB drives, both as source and as instalation drive, i only got this:
+
+error screen JPEG
+
+And i wasn't the only one. I saw several users reporting the same error with the same and different computers. to quote
+
+
 
 
 
