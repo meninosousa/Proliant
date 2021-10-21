@@ -47,8 +47,12 @@ After digging around the HP's website, I found the model of this microserver and
   6. USB 2.0
   7. SATA Gen 2
 
-One first look at these specs and actually this is not a bad computer at all.
-The fact that is AMD gives it cpu points for linux compatibility.
+But
+
+- **Max Capacity per Drive:** 2 TB
+
+With the exception of the last point, one first look at these specs and actually this is not a bad computer at all and that last point, I had a theory on that.
+The fact that is AMD gives it cpu points for linux compatibility, unlike all those NAS with a proprietary OS that after a certain number of years stops receiveing updates.
 The PCI-e x16 was actually populated with an AMD graphics card so it could be nice as a render farm or anything else that could use the GPU.
 Ther are other small details that interested me, like WOL and Gigabit ethernet but you get the point, at this stage this was actually becomming a problem.
 
@@ -56,6 +60,8 @@ I was starting to be interested in this computer as a whole and not just for pie
 
 
 ## The First Problem
+
+where boot jpg
 
 The computer wouldn't boot, so trash with it, forget about it.
 For sure this is a non standard PSU, with the usual stupid HP proprietary connectors...
@@ -74,7 +80,7 @@ Credits to SilverStone[^psushort]
 
 And predictably, the PSU was dead, the fan wouldn't start and using a multimeter, there was no output voltage in any 12V/5V/3.3V pin.
 
-### An alternative solution
+### An Alternative Solution
 
 And here is where you really want to make sure that you go further down the rabbit hole or not.
 In my case, I went to look for a standard ATX PSU just to see if the computer would at least give a sign of life.
@@ -83,8 +89,53 @@ And it did.
 
 image of spashscreen
 
-I was too deep to go back, how hard could it be to find a compatible 
+I was too deep to go back, how hard could it be to find a compatible PSU with this case? Last case scenario would be to leave a standard ATX PS/2 PSU outside of the case, right?
 
+NO, this was a strandard FLEX PSU. What is that? Went to search all the PSU standards around and there it was:
 
+PSU PIC JPG
 
+>**Flex ATX**
+>
+>This form factor is often used in small computer cases and is sometimes wrongly referred to as “Mini-ITX” PSU.
+>
+>Standard dimension for this form factor is: 81.5mm (W) x 40.5mm (H) x 150mm (D)
+>
+>There are variations for this form factor that have longer depth. 
 
+Credits to SilverStone again[^psuformfactors]
+
+[^psuformfactors]: [from SilverStone website](https://www.silverstonetek.com.tw/techtalk_cont.php?tid=10055)
+
+### The Final Solution
+
+At 50 CHF (more or less the same in Euros or Dollars), I ended up buying the Intertech Flex AP-MFATX25P8. It has:
+
+- **Output:** 250Watt
+- **Mainboard 20+4Pin:** 1x
+- **4Pin 12V:** 1x
+- **IDE 4Pin (Molex):**	2x
+- **S-ATA:** 3x
+- **Floppy:** 1x
+
+At 250W (100W more than the stock and dead one), this PSU should last for some time, even more consedering that I will not do anything more than store data in 2 HDD's.
+I need 2 more Molex connectors, it's just a question of finding some SATA -> Molex adapters. The remaining connectors might be used on the ODD tray in the future.
+
+So yes, I've reached a point where I actually spent money on this...at least it's standard. After receiving the PSU, found some old RAM (2x2GB), assembled everything and, let's boot it and install an OS, it will not be that hard...right?
+
+## The Second Problem
+
+where OS JPEG
+
+We all heard it at some point: **Linux is everywhere and it runs in everything.**
+This server supports windows but i really wanted to keep using linux around the house.
+Contrary to the NASPi, the only interaction that i can have with this server, is the power button (for now).
+This makes things like backup, disk information, usb copy and other scripts used on the NASPi, harder to use here, unless i use SSH all the time.
+A simpler solution would be better, a solution that i knew already from previous tests. That solution is OpenMediaVault because:
+
+- Open Source
+- Maintained
+- WebUI
+- Low requirements
+
+There's a strange USB internal port on this motherboard, so instead of using one of the 4 trays for the OS (and a HDD/SSD) or the ODD tray with some adapters for this tiny OS, I decided to install it on a small USB flash drive (4-16 GB)
