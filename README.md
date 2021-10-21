@@ -138,4 +138,16 @@ A simpler solution would be better, a solution that i knew already from previous
 - WebUI
 - Low requirements
 
-There's a strange USB internal port on this motherboard, so instead of using one of the 4 trays for the OS (and a HDD/SSD) or the ODD tray with some adapters for this tiny OS, I decided to install it on a small USB flash drive (4-16 GB)
+There's a strange USB internal port on this motherboard, so instead of using one of the 4 trays for the OS (and a HDD/SSD) or the ODD tray with some adapters for this tiny OS, I decided to install it on a small USB flash drive (4-16 GB). This will be easy, quoting the documentation[^omvbusbinstall]:
+
+>**Installation on USB**
+>
+>openmediavault can be installed on an USB flash drive to boot from it.
+> 1. Follow the Install on Dedicated Drive and select your USB flash drive as target drive.
+> 2. Enable the openmediavault-flashmemory plugin. This lowers the amount of writes to the USB flash drive, making sure you can enjoy it for a long time.
+
+[^omvusbinstall]: [from OMV documentation](https://openmediavault.readthedocs.io/en/5.x/installation/on_usb.html)
+
+
+
+
