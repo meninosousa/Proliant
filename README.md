@@ -231,6 +231,8 @@ drives JPEG
 I mentioned previously that this computer only suports 2 TB drives. I have a 4TB drive on my main computer, I tested it and it works.
 The reason for this, i'm sure, is that these old RAID controllers only accept up to 2 TB. I actually had problem in 2019 some months after buying this 4 TB drive, this is a funny story.
 
+### An Old Story
+
 In 2019 I found my first desktop on the University trash. It was another HP, an EliteDesk and i have no idea why it was on the trash because it was working fine. Nothing fancy but a desktop where i could do everything including some old school games.
 I had a 250GB HDD as the OS drive (Uni programs) and the 4TB drive for storage and i really wanted to start using linux eventually. All drives worked fine, nothing to report.
 
@@ -246,7 +248,10 @@ I clearly remember setting the HDD controller to IDE/AHCI and when i saw if afte
 The bios changed this automatically because both 250GB drives were the same model. I changed back to AHCI and the drive worked fine, with some corrupted (old) files.
 I remember thinking that this was just one more reason for never buy a prebuild.
 
+### OMV and Server Transfer
+
 Back to the proliant NAS, I bought nothing fancy, 2x WD Blue 4TB. They will be ON rarely so the RED drives (more expensive) weren't an option.
+I will test the 2TB limit as soon as I can, but I bet that it will be fine.
 They were installed in bay 2 and 4 for thermal reasons:
 - Bay 2 is away from the PSU;
 - Bay 4 is away from bay 2.
@@ -254,4 +259,14 @@ They were installed in bay 2 and 4 for thermal reasons:
 Since OMV uses UUID for drive identification, I can change them position and populate the remainder 2 bays and nothing will change on the filesystem perspective.
 The drives were recognized, the filesystems built and mounted and they were ready to receive some files.
 
+I could either place one of the USB drives on an USB port or I could just transfer everything through ethernet.
+Following a nice guide from [techpository](http://www.techpository.com/linux-using-rsync-with-a-sambasmbcifs-share/):
+
+`
+mkdir /mnt/share
+
+mount.cifs //192.168.I.P/sharename /mnt/share -o user=username
+
+rsync -av /source /mnt/share/target
+`
 
