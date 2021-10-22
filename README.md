@@ -129,7 +129,7 @@ So yes, I've reached a point where I actually spent money on this...at least it'
 
 ## The Second Problem
 
-where OS JPEG
+![Where is the OS](/images/whereos.jpg)
 
 We all heard it at some point: **Linux is everywhere and it runs in everything.**
 This server supports windows but i really wanted to keep using linux around the house.
@@ -154,7 +154,7 @@ There's a strange USB internal port on this motherboard, so instead of using one
 
 After several attempts with different USB drives, both as source and as instalation drive, i only got this:
 
-error screen JPEG
+![OMV Install Error](/images/installerror.jpg)
 
 And i wasn't the only one. I saw several [users](https://forum.openmediavault.org/index.php?thread/3592-solved-failed-to-create-a-file-system/)
 [reporting](https://forum.openmediavault.org/index.php?thread/29545-failed-to-create-a-file-system/)
@@ -185,17 +185,19 @@ Having decided that, I've dtried different techniques:
 
 Yep, I've ended up burning a CD.
 I could have installed Debian and OMV on top of that but after all the time i've spent doing everything above, burning a CD would be faster.
-Next time I know
+Next time I know.
 
-CD BURN JPEG
+![OMV CD](/images/omvcd.jpg)
 
 And it worked. OMV was Installed and I was now waiting for my new drives to arrive...and a fan...
 
 ## The Third Problem
 
-Become a fan jpeg
+![Become a Fan](/images/becomeafan.jpg)
 
 I had a Noctua fan lying around and the stock fan was making some noise so I just replaced it. Everything else is standard right?...right?
+
+![The Connectors](/images/fanconn.jpg)
 
 Just why HP? This microserver also uses a PWM fan, but altough the connector has 4 pints, the shape and pinout is different.
 Looking around I found a solution, with the correct pinout but, it still doesn't work with all fans, including mine.
