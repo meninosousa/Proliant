@@ -4,7 +4,7 @@
 
 On one of my lastest dumpster diving, I found this:
 
-image of server
+![HP ProLiant](/images/proliant.jpg)
 
 This is an HP ProLiant MicroServer and, until i finally decided to keep it, several toughts passed though my mind:
 
