@@ -56,6 +56,8 @@ The fact that is AMD gives it cpu points for linux compatibility, unlike all tho
 The PCI-e x16 was actually populated with an AMD graphics card so it could be nice as a render farm or anything else that could use the GPU.
 Ther are other small details that interested me, like WOL and Gigabit ethernet but you get the point, at this stage this was actually becomming a problem.
 
+Silent PC Reviews have a nice article about this [here](https://silentpcreview.com/hp-proliant-microserver/)
+
 I was starting to be interested in this computer as a whole and not just for pieces. The problem? It wouldn't boot.
 
 
@@ -152,9 +154,104 @@ After several attempts with different USB drives, both as source and as instalat
 
 error screen JPEG
 
-And i wasn't the only one. I saw several users reporting the same error with the same and different computers. to quote
+And i wasn't the only one. I saw several [users](https://forum.openmediavault.org/index.php?thread/3592-solved-failed-to-create-a-file-system/)
+[reporting](https://forum.openmediavault.org/index.php?thread/29545-failed-to-create-a-file-system/)
+[the](https://www.reddit.com/r/OpenMediaVault/comments/9a320r/installation_error_failed_to_create_a_file_system/)
+[same](https://forum.openmediavault.org/index.php?thread/16380-failed-to-create-a-file-system-on-a-usb-drive-when-installing/)
+[error](https://forum.openmediavault.org/index.php?thread/8203-failed-to-create-a-file-system/)
+[with](https://forum.openmediavault.org/index.php?thread/26529-failed-to-create-a-file-system/)
+the same and different computers (I have more links).
 
+The first suggestion in the majority of cases was:
 
+> Can you try to install via CD?
+ 
+> booting from CD and installing to the HDD from there.
 
+> Boot from your live cd/dvd
+
+> burn the openmediavault iso on a cd
+
+I've ditched optical media long time ago so no, I really didn't want to burn a CD.
+Having decided that, I've dtried different techniques:
+- **Using another computer to install on the USB drive:** Worked there but not on this computer
+- **Burn the ISO on another HDD and use it as source:** Didn't boot
+- **Burn the ISO on another HDD and use an USB adapter:** Same error
+- **Use different USB ports as source/destination:** Same error
+
+### The Solution
+
+Yep, I've ended up burning a CD.
+I could have installed Debian and OMV on top of that but after all the time i've spent doing everything above, burning a CD would be faster.
+Next time I know
+
+CD BURN JPEG
+
+And it worked. OMV was Installed and I was now waiting for my new drives to arrive...and a fan...
+
+## The Third Problem
+
+Become a fan jpeg
+
+I had a Noctua fan lying around and the stock fan was making some noise so I just replaced it. Everything else is standard right?...right?
+
+Just why HP? This microserver also uses a PWM fan, but altough the connector has 4 pints, the shape and pinout is different.
+Looking around I found a solution, with the correct pinout but, it still doesn't work with all fans, including mine.
+
+The computer boots but it shuts down after 10 seconds for security reasons.
+The fan spins, but not enough aparently.
+
+### The Solution (???)
+
+Having tried all the possible configurations, nothing worked and I ended up cleaning the stock fan, added lubricant and reinstalled it.
+
+This is the cancer of this server. When one day this fan fails, anyone will have an hard time to find a replacement.
+HP justifies this by saying[^silentpcreview]:
+
+> 
+> **Why is the fan configuration non-standard? That is, if a fan burns out it cannot easily be replaced with one from normal outlets (ie Frys) due to the plug incompatibility.**
+> 
+> Because of its small form-factor and acoustic goals, the MicroServer requires a fan that is powerful yet quiet.
+> This fan was selected because it met the MicroServers stringent system specifications
+
+[^silentpcreview]: [from Silent PC Review website](https://silentpcreview.com/hp-proliant-microserver/)
+
+No HP, anyone can use any fan avaliable.
+Then, if you think that the airflow is not enough, you display a warning while POST or even change the color of the status LED.
+Blocking any use of this computer because the fan is not the official, this is planned obsolecense.
+
+I was almost going to dump this on the same trash where i found it on the first place but, i'll find a solution eventually in the future.
+
+## My new NAS
+
+With OMV installed, first configuration done and the flash plugin installed, it was time to install the new drives.
+
+drives JPEG
+
+I mentioned previously that this computer only suports 2 TB drives. I have a 4TB drive on my main computer, I tested it and it works.
+The reason for this, i'm sure, is that these old RAID controllers only accept up to 2 TB. I actually had problem in 2019 some months after buying this 4 TB drive, this is a funny story.
+
+In 2019 I found my first desktop on the University trash. It was another HP, an EliteDesk and i have no idea why it was on the trash because it was working fine. Nothing fancy but a desktop where i could do everything including some old school games.
+I had a 250GB HDD as the OS drive (Uni programs) and the 4TB drive for storage and i really wanted to start using linux eventually. All drives worked fine, nothing to report.
+
+But one day I found another dead computer with another 250GB HDD and that was perfect to install linux.
+I installed the drive and I clearly remember this moment because i knew that something was wrong.
+While on POST, the boot sequence was different, there was this new RAID information and the 4TB drive was shown as a 2TB drive.
+I didn't mind at the time because everything was working fine.
+
+Untill the 4TB HDD reached 2TB of used space and I coudn't open anything from that drive, especially the new files.
+This was really strange as before the drive was working just fine, even at 75% usage capacity. I didn't get it. And then I went to the bios.
+
+I clearly remember setting the HDD controller to IDE/AHCI and when i saw if after this problem, it was set to RAID.
+The bios changed this automatically because both 250GB drives were the same model. I changed back to AHCI and the drive worked fine, with some corrupted (old) files.
+I remember thinking that this was just one more reason for never buy a prebuild.
+
+Back to the proliant NAS, I bought nothing fancy, 2x WD Blue 4TB. They will be ON rarely so the RED drives (more expensive) weren't an option.
+They were installed in bay 2 and 4 for thermal reasons:
+- Bay 2 is away from the PSU;
+- Bay 4 is away from bay 2.
+
+Since OMV uses UUID for drive identification, I can change them position and populate the remainder 2 bays and nothing will change on the filesystem perspective.
+The drives were recognized, the filesystems built and mounted and they were ready to receive some files.
 
 
