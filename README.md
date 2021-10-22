@@ -202,6 +202,8 @@ I had a Noctua fan lying around and the stock fan was making some noise so I jus
 Just why HP? This microserver also uses a PWM fan, but altough the connector has 4 pints, the shape and pinout is different.
 Looking around I found a solution, with the correct pinout but, it still doesn't work with all fans, including mine.
 
+![Fan Pinout](/images/pinout.png)
+
 The computer boots but it shuts down after 10 seconds for security reasons.
 The fan spins, but not enough aparently.
 
@@ -218,11 +220,20 @@ HP justifies this by saying[^silentpcreview]:
 > Because of its small form-factor and acoustic goals, the MicroServer requires a fan that is powerful yet quiet.
 > This fan was selected because it met the MicroServers stringent system specifications
 
-[^silentpcreview]: [from Silent PC Review website](https://silentpcreview.com/hp-proliant-microserver/)
-
 No HP, anyone can use any fan avaliable.
 Then, if you think that the airflow is not enough, you display a warning while POST or even change the color of the status LED.
 Blocking any use of this computer because the fan is not the official, this is planned obsolecense.
+
+At least some other fans might work, as long as they rotate at 550 RPM minimum as noted on Silent PC Review[^silentpcreview]:
+> 
+> First, the manual fan control was used to determine the minimum fan RPM allowed before auto-shutdown.
+> The BIOS fan monitoring screen was left on while the fan knob was rotated.
+> It turned out to be somewhere around 500 RPM; the exact value was difficult to pinpoint.
+> It is probably safe to consider 550 RPM as the minimum speed. 
+
+
+
+[^silentpcreview]: [from Silent PC Review website](https://silentpcreview.com/hp-proliant-microserver/)
 
 I was almost going to dump this on the same trash where i found it on the first place but, i'll find a solution eventually in the future.
 
