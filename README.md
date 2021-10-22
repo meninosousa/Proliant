@@ -270,3 +270,36 @@ mount.cifs //192.168.I.P/sharename /mnt/share -o user=username
 rsync -av /source /mnt/share/target
 ```
 
+After the whole night, all files were transfered:
+
+file transfer JPEG
+
+### Rsync Inside
+
+With the first disk done, now it's time to use rsync again, to copy all files to the second HDD. I can either use a command line on the `Scheduled Jobs`:
+
+`rsync -av --delete /source/ /target/`
+
+Or, even easier, go direcly to the `Rsync` menu and add there the task.
+
+screenshot of rsync JPEG
+
+## Conclusions
+
+I would never buy this, never especially knowing HP's techniques on how to make your devices unusable.
+I'll keep it since i found it on the trash but to be clear, I would never buy it because:
+- **Motherboard is not a standard form factor:** altough i'm quite sure that the dimentions are similar to the mini-ITX standard;
+- **This stupid fan connector:** seriously just no, not being able to use a standard high flow fan just kills this product.
+- **It's HP:** as a big company, you need to have profits, planned obscolescence unfortunatelly it's still part of their portfolio. I really loved the fact that the PSU is standard but just no.
+
+If you find on the trash, sure it's nice, but appart from that, there are much better options out there.
+
+## Future Work
+
+This repository was initially made for programing projects in this NAS. All the LEDs are connected to the board so I don't have that much freedom for this.
+
+But, there's an ODD free bay, and pleanty of space to place an arduino and LED's, buttons, screens.
+
+I'll update here
+
+
