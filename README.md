@@ -262,11 +262,9 @@ The drives were recognized, the filesystems built and mounted and they were read
 I could either place one of the USB drives on an USB port or I could just transfer everything through ethernet.
 Following a nice guide from [techpository](http://www.techpository.com/linux-using-rsync-with-a-sambasmbcifs-share/):
 
-`
-mkdir /mnt/share
+`mkdir /mnt/share
 
 mount.cifs //192.168.I.P/sharename /mnt/share -o user=username
 
-rsync -av /source /mnt/share/target
-`
+rsync -av /source /mnt/share/target`
 
