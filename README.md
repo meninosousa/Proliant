@@ -204,6 +204,8 @@ Looking around I found a solution, with the correct pinout but, it still doesn't
 
 ![Fan Pinout](/images/pinout.png)
 
+Credits to Silent PC Review[^silentpcreview]
+
 The computer boots but it shuts down after 10 seconds for security reasons.
 The fan spins, but not enough aparently.
 
