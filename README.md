@@ -63,7 +63,7 @@ I was starting to be interested in this computer as a whole and not just for pie
 
 ## The First Problem
 
-where boot jpg
+![The Frantics Cover](/images/boottothehead.jpg)
 
 The computer wouldn't boot, so trash with it, forget about it.
 For sure this is a non standard PSU, with the usual stupid HP proprietary connectors...
@@ -72,9 +72,11 @@ What's that? ATX 24 Pin? WHAT?
 Seriously, I couldn't believe my eyes, this computer actually had a 24 Pin ATX connector for the PSU.
 I dont't know if the PSU is actually standard, but at least seeing a known connector actually made a tear drop from my eye.
 
+![PSU Connector](/images/psuconn.jpg)
+
 So I know this connector, so i know that I can test if this PSU is working by shorting the green cable:
 
-image of psu short
+![PSU Connector Short](/images/psushort.jpg)
 
 Credits to SilverStone[^psushort]
 
@@ -89,13 +91,13 @@ In my case, I went to look for a standard ATX PSU just to see if the computer wo
 
 And it did.
 
-image of spashscreen
+![Booting](/images/firstboot.jpg)
 
 I was too deep to go back, how hard could it be to find a compatible PSU with this case? Last case scenario would be to leave a standard ATX PS/2 PSU outside of the case, right?
 
 NO, this was a strandard FLEX PSU. What is that? Went to search all the PSU standards around and there it was:
 
-PSU PIC JPG
+![Flex ATX Drawing](/images/flexatx.jpg)
 
 >**Flex ATX**
 >
