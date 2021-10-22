@@ -233,8 +233,6 @@ At least some other fans might work, as long as they rotate at 550 RPM minimum a
 > It turned out to be somewhere around 500 RPM; the exact value was difficult to pinpoint.
 > It is probably safe to consider 550 RPM as the minimum speed. 
 
-
-
 [^silentpcreview]: [from Silent PC Review website](https://silentpcreview.com/hp-proliant-microserver/)
 
 I was almost going to dump this on the same trash where i found it on the first place but, i'll find a solution eventually in the future.
@@ -289,7 +287,7 @@ rsync -av /source /mnt/share/target
 
 After the whole night, all files were transfered:
 
-file transfer JPEG
+![Servers Rsync End](/images/rsync.png)
 
 ### Rsync Inside
 
@@ -315,7 +313,7 @@ If you find on the trash, sure it's nice, but appart from that, there are much b
 
 This repository was initially made for programing projects in this NAS. All the LEDs are connected to the board so I don't have that much freedom for this.
 
-But, there's an ODD free bay, and pleanty of space to place an arduino and LED's, buttons, screens.
+But, there's an ODD free bay, and pleanty of space to place an arduino and LEDs, buttons, screens.
 
 I'll update here
 
